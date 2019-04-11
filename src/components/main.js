@@ -77,10 +77,10 @@ class MainHeader extends React.Component {
           </Col>
         </Row>
         <Row>
-          <Col xs="6">
+          <Col sm={6}>
             <h2> Insight and Resources</h2>
           </Col>
-          <Col xs="6">
+          <Col sm={6}>
             <Form inline>
               <FormControl
                 type="text"
@@ -92,7 +92,7 @@ class MainHeader extends React.Component {
           </Col>
         </Row>
         <Row>
-          <Col xs="6">
+          <Col sm={6}>
             <ListGroup defaultActiveKey="#link1">
               <ListGroup.Item action href="#link1">
                 When you are not allowed a sit at the table, build your own
@@ -107,7 +107,7 @@ class MainHeader extends React.Component {
             </ListGroup>
           </Col>
 
-          <Col xs="6">
+          <Col sm={6}>
             <hr />
             <h4> In the News </h4>
           </Col>
