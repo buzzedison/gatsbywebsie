@@ -18,7 +18,7 @@ class MainHeader extends React.Component {
     return (
       <div class="maincontainer" id="maincontent">
         <Row>
-          <Col xs="6">
+          <Col sm={6}>
             <Card>
               <Card.Img variant="top" src={Photo} />
               <Card.Body>
@@ -33,7 +33,7 @@ class MainHeader extends React.Component {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs="6">
+          <Col sm={6}>
             <CardGroup>
               <Card>
                 <Card.Img variant="top" src={Courses} />
@@ -43,8 +43,8 @@ class MainHeader extends React.Component {
                   </Card.Title>
                   <Card.Text>
                     Want to start a business, learn to pitch your business to
-                    investors, learn to inspire and lead your team, business
-                    development.
+                    investors, learn to inspire and lead your team, learn to
+                    manage your business effectively.
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>
@@ -59,8 +59,9 @@ class MainHeader extends React.Component {
                     <strong>Learn to Code</strong>{" "}
                   </Card.Title>
                   <Card.Text>
-                    avaScript, React, Ruby on Rails, Python. Take your first
-                    course for free. Course begins May 20, 2019.
+                    JavaScript, React, React Native, Ruby on Rails, Python, Git,
+                    MongoDB, Node Js, Gatsby. Take your first course for free.
+                    Course begins May 20, 2019.
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>
