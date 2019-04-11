@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 html {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -42,11 +43,16 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  color: #333;
 }
+
 a:active,
 a:hover {
   outline-width: 0;
+  color: #ff2265;
 }
+
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
@@ -200,7 +206,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: roboto, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
