@@ -1,12 +1,17 @@
+const dotenv = require("dotenv")
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config()
+}
 module.exports = {
   siteMetadata: {
     title: `Buzzedison: Spark your Career or Calling`,
     description: `Power your business, career and calling`,
-    author: `@gatsbyjs`,
+    author: `@buzzedison`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `@contentful/gatsby-transformer-contentful-richtext`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,5 +37,14 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `037lifnbabu6`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: `555f66614e25ed3eb942fd3e4531f02386c44f5a1a726d8f4ee15170ba4122b8`,
+      },
+    },
   ],
 }
