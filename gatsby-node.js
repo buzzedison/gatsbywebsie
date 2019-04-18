@@ -7,7 +7,20 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve("./src/templates/blogPost.js")
     resolve(
-      graphql().then(result => {
+      graphql(
+        `
+          {
+            allContentfulInsight {
+              edges {
+                node {
+                  title
+                  slug
+                }
+              }
+            }
+          }
+        `
+      ).then(result => {
         if (result.errors) {
           console.log(result.errors)
           reject(result.errors)
