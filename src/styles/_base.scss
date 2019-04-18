@@ -1,11 +1,12 @@
 .container#content {
-  margin-top: 60px;
+  margin-top: 80px;
+  object-fit: cover;
 }
 body {
-  background: #fdfdfd;
+  background: #fff;
 
   color: rgb(15, 15, 15);
-  padding: 2em;
+
   position: relative;
   min-height: 300px;
   overflow: hidden;
@@ -16,8 +17,8 @@ body {
   bottom: -55%;
   left: 0;
   right: 0;
-  height: 50%;
-  background: #fff;
+  height: 100%;
+  background: transparent;
   transform: skew(0deg, -9deg);
 }
 a {
@@ -35,20 +36,49 @@ h1 {
   text-align: center;
 }
 .navbar {
-  background-color: #fff;
+  background-color: #ffffff;
   font-size: 16px;
 
-  // border-right: 1px solid rgba(0, 0, 0, 0.4);
+  //border-right: 1px solid rgba(0, 0, 0, 0.4);
   // border-left: 1px solid rgba(0, 0, 0, 0.4);
 }
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
   color: #7d7d7e;
   &:hover {
-    color: #ec3326;
+    color: #0e41e9;
   }
 }
 ul {
   list-style: none;
   padding: 0;
+}
+
+.intro {
+  margin: 0;
+  padding: 20px;
+  height: 450px;
+  background: #4a5e75;
+}
+
+.introText {
+  color: white;
+  padding: 50px 70px 0px 70px;
+  text-align: left;
+  font-family: Raleway;
+}
+
+.introP {
+  color: white;
+  padding: 10px 70px 0px 70px;
+  text-align: left;
+  font-family: Raleway;
+}
+
+.introB {
+  margin: 70px;
+}
+
+.introS {
+  margin-top: 50px;
 }

@@ -1,4 +1,4 @@
-const Promise = require("bluebird")
+const Promise = require("dotenv")
 const path = require("path")
 
 exports.createPages = ({ graphql, actions }) => {

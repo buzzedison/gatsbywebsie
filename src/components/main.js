@@ -16,7 +16,7 @@ import Coding from "../images/coding.png"
 class MainHeader extends React.Component {
   render() {
     return (
-      <div class="maincontainer" id="maincontent">
+      <div class="container" id="content">
         <Row>
           <Col sm={6}>
             <Card>

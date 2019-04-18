@@ -28,9 +28,9 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div className="container" id="content">
+        <div>
           <main>{children}</main>
-          <footer>
+          <footer fixed="bottom">
             © {new Date().getFullYear()}, Powered by
             {` `}
             <a href="https://www.bloopglobal.com">BLOOP</a>
