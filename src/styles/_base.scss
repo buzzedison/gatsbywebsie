@@ -57,8 +57,17 @@ ul {
 .intro {
   margin: 0;
   padding: 20px;
-  height: 450px;
+  height: 500px;
   background: #4a5e75;
+}
+
+@media only screen and (max-width: 600px) {
+  .introText {
+    color: white;
+    padding: 20px 40px 0px 40px;
+    text-align: left;
+    font-family: Raleway;
+  }
 }
 
 .introText {
@@ -81,4 +90,20 @@ ul {
 
 .introS {
   margin-top: 50px;
+}
+
+@media only screen and (max-width: 650px) {
+  .introS {
+    display: none;
+  }
+}
+
+.hero {
+  background: #4a5e75;
+  padding: 20px;
+  font-size: 40px;
+  color: white;
+  font-family: "raleway";
+  text-align: center;
+  margin-bottom: 20px;
 }

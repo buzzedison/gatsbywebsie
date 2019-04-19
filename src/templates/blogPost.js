@@ -1,64 +1,46 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Helmet from "react-helmet"
-import get from "lodash/get"
-import Img from "gatsby-image"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = get(this.props, "data.contentfulInsight")
-    const siteTitle = get(this.props, "data.site.siteMetadata.title")
-
-    return (
-      <Layout location={this.props.location}>
-        <div style={{ background: "#fff" }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
-          <div className={heroStyles.hero}>
-            <Img
-              className={heroStyles.heroImage}
-              alt={post.title}
-              fluid={post.Image.fluid}
-            />
-          </div>
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: "block",
-              }}
-            >
-              {post.publishDate}
-            </p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.body.childContentfulRichText.html,
-              }}
-            />
-          </div>
+const BlogPost = ({ data }) => {
+  const { title, body, image, tags } = data.contentfulBlogPost
+  return (
+    <Layout>
+      <SEO title={title} />
+      <div className="blogpost">
+        <h1>{title}</h1>
+        <img alt={title} src={image.file.url} />
+        <div className="tags">
+          {tags.map(tag => (
+            <span className="tag" key={tag}>
+              {tag}
+            </span>
+          ))}
         </div>
-      </Layout>
-    )
-  }
+        <p className="body-text">{body.body}</p>
+        <Link to="/blogposts">View more posts</Link>
+        <Link to="/">Back to Home</Link>
+      </div>
+    </Layout>
+  )
 }
 
-export default BlogPostTemplate
+export default BlogPost
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
+  query($slug: String!) {
     contentfulInsight(slug: { eq: $slug }) {
       title
       slug
+
       image {
         fluid {
           src
         }
       }
+      tags
+
       body {
         childContentfulRichText {
           html

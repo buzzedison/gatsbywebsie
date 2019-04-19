@@ -3,53 +3,36 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import get from "lodash/get"
 
-class Blog extends React.Component {
-  render() {
-    const siteTitle = get(this, "props.data.site.siteMetadata.title")
-    const posts = get(this, "props.data.allContentfulInsight.edges")
-
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="All posts"
-          keywords={[`blog`, `Insight`, `Leadership`, `Development`]}
-        />
-
-        {posts.map(({ node }) => {
-          const title = node.title || node.slug
-          return (
-            <div key={node.slug}>
-              <h3>
-                <Link style={{ boxShadow: `none` }} to={node.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.date}</small>
-              <p>{node.title} </p>
-            </div>
-          )
-        })}
-      </Layout>
-    )
-  }
+const BlogPosts = ({ data }) => {
+  const blogPosts = data.allContentfulInsight.edges
+  return (
+    <Layout>
+      <SEO title="Blog posts" />
+      <h1>{"Here's a list of all blogposts!"}</h1>
+      <div className="blogposts">
+        {blogPosts.map(({ node: post }) => (
+          <div key={post.id}>
+            <Link to={`/blogpost/${post.slug}`}>{post.title}</Link>
+          </div>
+        ))}
+        <span className="mgBtm__24" />
+        <Link to="/">Go back to the homepage</Link>
+      </div>
+    </Layout>
+  )
 }
 
-export default Blog
+export default BlogPosts
 
 export const pageQuery = graphql`
-  query BlogQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allContentfulInsight {
+  query BlogPostsQuery {
+    allContentfulInsight(limit: 1000) {
       edges {
         node {
           title
           slug
+          tags
           image {
             fluid {
               src

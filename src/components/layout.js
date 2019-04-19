@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 
 import "../styles/index.scss"
@@ -30,11 +31,7 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>
           <main>{children}</main>
-          <footer fixed="bottom">
-            © {new Date().getFullYear()}, Powered by
-            {` `}
-            <a href="https://www.bloopglobal.com">BLOOP</a>
-          </footer>
+          <Footer />
         </div>
       </>
     )}

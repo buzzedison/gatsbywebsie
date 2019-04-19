@@ -1,17 +1,12 @@
 import React from "react"
 import { Row, Col } from "reactstrap"
-import {
-  Card,
-  CardGroup,
-  Button,
-  Form,
-  FormControl,
-  ListGroup,
-} from "react-bootstrap"
+import { Card, CardGroup, Button, Form, FormControl } from "react-bootstrap"
 
 import Photo from "../images/edison.png"
 import Courses from "../images/courses.png"
 import Coding from "../images/coding.png"
+
+import { Link } from "gatsby"
 
 class MainHeader extends React.Component {
   render() {
@@ -35,7 +30,7 @@ class MainHeader extends React.Component {
           </Col>
           <Col sm={6}>
             <CardGroup>
-              <Card>
+              <Card border="0">
                 <Card.Img variant="top" src={Courses} />
                 <Card.Body>
                   <Card.Title>
@@ -93,18 +88,18 @@ class MainHeader extends React.Component {
         </Row>
         <Row>
           <Col sm="auto">
-            <ListGroup defaultActiveKey="#link1">
-              <ListGroup.Item action href="#link1">
-                When you are not allowed a sit at the table, build your own
-                table
-              </ListGroup.Item>
-              <ListGroup.Item action href="#link2" disabled>
-                BE YOUR OWN INSPIRATION
-              </ListGroup.Item>
-              <ListGroup.Item action>
-                How failure can teach you so much about success
-              </ListGroup.Item>
-            </ListGroup>
+            <div className="home">
+              <p>Welcome my awesome blog</p>
+              <div>
+                <div
+                  style={{
+                    maxWidth: `300px`,
+                    margin: "0 auto 1.45rem",
+                  }}
+                />
+              </div>
+              <Link to="/blog/">View all posts</Link>
+            </div>
           </Col>
 
           <Col sm="auto">
