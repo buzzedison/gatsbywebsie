@@ -89,7 +89,12 @@ class MainHeader extends React.Component {
         <Row>
           <Col sm="auto">
             <div className="home">
-              <p>Welcome my awesome blog</p>
+              <Link to="/blogPost/when-you-are-not-allowed-a-sit-at-the-table-build-your-own-table">
+                <p>
+                  When you are not allowed a sit at the table, build your own
+                  table
+                </p>{" "}
+              </Link>
               <div>
                 <div
                   style={{

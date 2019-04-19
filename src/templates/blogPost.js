@@ -9,18 +9,31 @@ const BlogPost = ({ data }) => {
     <Layout>
       <SEO title={title} />
       <div className="blogpost">
-        <h1>{title}</h1>
-        <img alt={title} src={image.file.url} />
-        <div className="tags">
-          {tags.map(tag => (
-            <span className="tag" key={tag}>
-              {tag}
-            </span>
-          ))}
-        </div>
-        <p className="body-text">{body.body}</p>
-        <Link to="/blogposts">View more posts</Link>
-        <Link to="/">Back to Home</Link>
+        <div className="blogHead" />
+        <h2 className="container" id="content">
+          {title}
+        </h2>
+        <center>
+          {" "}
+          <img
+            alt={title}
+            src={image.file.url}
+            className="container"
+            id="blogImg"
+          />
+        </center>
+
+        <div
+          className="container"
+          id="content"
+          dangerouslySetInnerHTML={{
+            __html: body.childContentfulRichText.html,
+          }}
+        />
+
+        <Link to="/blog" className="container" id="content">
+          Back to Insight/Blog
+        </Link>
       </div>
     </Layout>
   )
@@ -35,8 +48,8 @@ export const pageQuery = graphql`
       slug
 
       image {
-        fluid {
-          src
+        file {
+          url
         }
       }
       tags

@@ -44,7 +44,7 @@ class Header extends React.Component {
               </NavItem>
 
               <NavItem>
-                <NavLink href="/insight">Insight</NavLink>
+                <NavLink href="/blog">Insight</NavLink>
               </NavItem>
 
               <UncontrolledDropdown nav inNavbar>

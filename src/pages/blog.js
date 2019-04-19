@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import { ListGroup, ListGroupItem } from "reactstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -9,15 +9,27 @@ const BlogPosts = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blog posts" />
-      <h1>{"Here's a list of all blogposts!"}</h1>
-      <div className="blogposts">
-        {blogPosts.map(({ node: post }) => (
-          <div key={post.id}>
-            <Link to={`/blogpost/${post.slug}`}>{post.title}</Link>
-          </div>
-        ))}
-        <span className="mgBtm__24" />
-        <Link to="/">Go back to the homepage</Link>
+      <div className="blogHead" />
+      <div className="container" id="content">
+        <center>
+          <p>
+            {" "}
+            <h2>{"Insight, Blog, My thoughts, Rantings, Cravings!"}</h2>
+          </p>
+        </center>
+        <ListGroup>
+          {" "}
+          <ListGroupItem>
+            <div className="blogposts" id="content">
+              {blogPosts.map(({ node: post }) => (
+                <div key={post.id}>
+                  <Link to={`/blogPost/${post.slug}`}>{post.title}</Link>
+                </div>
+              ))}
+              <span className="mgBtm__24" />
+            </div>
+          </ListGroupItem>
+        </ListGroup>
       </div>
     </Layout>
   )
