@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogPost = ({ data }) => {
-  const { title, body, image, tags } = data.contentfulBlogPost
+  const { title, body, image, tags } = data.contentfulInsight
   return (
     <Layout>
       <SEO title={title} />
