@@ -4,8 +4,6 @@ import { Card } from "react-bootstrap"
 import { MDBBtn, MDBJumbotron, MDBContainer } from "mdbreact"
 import Photo from "../images/edison.png"
 
-import { Link } from "gatsby"
-
 class MainHeader extends React.Component {
   render() {
     return (
