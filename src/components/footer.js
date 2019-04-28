@@ -1,23 +1,28 @@
 import React from "react"
+import { BrowserRouter } from "react-router-dom"
+import { MDBNav, MDBNavItem, MDBNavLink } from "mdbreact"
 
-import { Navbar, Nav } from "react-bootstrap"
-
-class Footer extends React.Component {
-  render() {
-    return (
-      <div className="site-footer">
-        <Navbar bg="dark" variant="dark" sticky="bottom">
-          <Navbar.Brand href="#home">BuzzEdison</Navbar.Brand>
-          <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Learn</Nav.Link>
-            <Nav.Link href="#pricing">Insight</Nav.Link>
-            <Nav.Link href="#pricing">Ministry</Nav.Link>
-          </Nav>
-        </Navbar>
-      </div>
-    )
-  }
+const Footer = () => {
+  return (
+    <BrowserRouter>
+      <MDBNav className="justify-content-center" color="amber">
+        <MDBNavItem>
+          <MDBNavLink active to="#!">
+            Home
+          </MDBNavLink>
+        </MDBNavItem>
+        <MDBNavItem>
+          <MDBNavLink to="#!">Courses</MDBNavLink>
+        </MDBNavItem>
+        <MDBNavItem>
+          <MDBNavLink to="#!">Insight</MDBNavLink>
+        </MDBNavItem>
+        <MDBNavItem>
+          <MDBNavLink to="#!">Events</MDBNavLink>
+        </MDBNavItem>
+      </MDBNav>
+    </BrowserRouter>
+  )
 }
 
 export default Footer

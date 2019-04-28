@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import MainHeader from "../components/main"
 import Intro from "../components/intro"
 import SEO from "../components/seo"
+import Courses from "../components/courses"
 
 const IndexPage = () => (
   <div>
@@ -14,6 +15,7 @@ const IndexPage = () => (
       />
       <Intro />
       <MainHeader />
+      <Courses />
     </Layout>
   </div>
 )
