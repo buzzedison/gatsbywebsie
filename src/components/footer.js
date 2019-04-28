@@ -7,9 +7,7 @@ const Footer = () => {
     <BrowserRouter>
       <MDBNav className="justify-content-center" color="amber">
         <MDBNavItem>
-          <MDBNavLink active to="#!">
-            Home
-          </MDBNavLink>
+          <MDBNavLink to="#!">Home</MDBNavLink>
         </MDBNavItem>
         <MDBNavItem>
           <MDBNavLink to="#!">Courses</MDBNavLink>
