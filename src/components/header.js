@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React, { Component } from "react"
 import logo from "../images/logo.png"
+
 import {
   Collapse,
   Navbar,
@@ -52,7 +53,10 @@ class Header extends React.Component {
                   Learn
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>Coding</DropdownItem>
+                  <DropdownItem>
+                    {" "}
+                    <NavLink href="/coding">Coding </NavLink>
+                  </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>Business</DropdownItem>
                   <DropdownItem divider />
