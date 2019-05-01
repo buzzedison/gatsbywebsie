@@ -7,240 +7,105 @@ import {
   MDBMask,
   MDBIcon,
   MDBView,
-  MDBBadge,
+  MDBBtn,
 } from "mdbreact"
+import { Link, graphql } from "gatsby"
+import Inspire from "../images/inspire.png"
 import Layout from "../components/layout"
+import God from "../images/God.png"
+import Tech from "../images/tech.jpg"
 
-const FeaturesPage = () => {
-  const newsStyle = {
-    borderBottom: "1px solid #e0e0e0",
-    marginBottom: "1.5rem",
-  }
-
+const Insight = ({ data }) => {
+  const InsightBlog = data.allContentfulInsight.edges
   return (
     <Layout>
-      <MDBCard
-        className="my-5 px-5 mx-auto"
-        style={{ fontWeight: 300, maxWidth: "90%" }}
-      >
-        <MDBCardBody style={{ paddingTop: 0 }}>
-          <h2 className="h1-responsive font-weight-bold my-5 text-center">
+      <MDBCard className="my-5 px-5 pb-5">
+        <MDBCardBody className="text-center">
+          <h2 className="h1-responsive font-weight-bold text-center my-5">
             Insight, Blog, My thoughts, Rantings, Cravings!
           </h2>
-          <p className="dark-grey-text mx-auto mb-5 w-75 text-center">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit id
-            laborum.
+          <p className="text-center w-responsive mx-auto mb-5">
+            A lot goes on in my head, and it is nice to be able to share them
+            here. I promise to share my passion, cravings, frustrations, and
+            know-how with you. Thank you for taking your time to read a part of
+            me.
           </p>
           <MDBRow>
-            <MDBCol md="12" lg="4" className="mb-lg-0 mb-5">
-              <MDBView hover rounded className="z-depth-1-half mb-4">
-                <img
-                  className="img-fluid"
-                  src="https://mdbootstrap.com/img/Photos/Others/images/86.jpg"
-                  alt=""
-                />
-                <a href="#!">
-                  <MDBMask overlay="white-slight" className="waves-light" />
-                </a>
+            <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
+              <MDBView hover className="rounded z-depth-2 mb-4" waves>
+                <img className="img-fluid" src={Inspire} alt="inspire" />
+                <MDBMask overlay="white-slight" />
               </MDBView>
-              <MDBRow className="mb-3">
-                <MDBCol size="12">
-                  <a href="#!">
-                    <MDBBadge color="pink">
-                      <MDBIcon
-                        icon="camera"
-                        className="pr-2"
-                        aria-hidden="true"
-                      />
-                      Adventure
-                    </MDBBadge>
-                  </a>
-                </MDBCol>
-              </MDBRow>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!" className="font-weight-bold">
-                    This is title of the news
-                  </a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">24 Food Swaps That Slash Calories.</a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">How to Make a Beet Cocktail?</a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">8 Sneaky Reasons You're Always Hungry.</a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between mb-4">
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">5 Pressure Cooker Recipes You Need to Try.</a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-            </MDBCol>
+              <a href="#!" className="pink-text">
+                <h6 className="font-weight-bold mb-3">
+                  <MDBIcon icon="map" className="pr-2" />
+                  Inspirational
+                </h6>
+              </a>
+              <p className="font-weight-bold mb-3">
+                <strong>
+                  {InsightBlog.map(({ node: blog }) => (
+                    <div key={blog.id}>
+                      <Link to={`/blogPost/${blog.slug}`}>{blog.title}</Link>
+                    </div>
+                  ))}
+                </strong>
+              </p>
 
-            <MDBCol md="12" lg="4" className="mb-lg-0 mb-5">
-              <MDBView hover rounded className="z-depth-1-half mb-4">
-                <img
-                  className="img-fluid"
-                  src="https://mdbootstrap.com/img/Photos/Others/images/31.jpg"
-                  alt=""
-                />
-                <a href="#!">
-                  <MDBMask overlay="white-slight" className="waves-light" />
-                </a>
-              </MDBView>
-              <MDBRow className="mb-3">
-                <MDBCol size="12">
-                  <a href="#!">
-                    <MDBBadge color="deep-orange">
-                      <MDBIcon
-                        icon="plane"
-                        className="pr-2"
-                        aria-hidden="true"
-                      />
-                      Travel
-                    </MDBBadge>
-                  </a>
-                </MDBCol>
-              </MDBRow>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!" className="font-weight-bold">
-                    This is title of the news
-                  </a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">Trends in the blogosphere for 2018.</a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">Where can you eat the best lunch in Warsaw?</a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">What camera is worth taking for holidays?</a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between mb-4">
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">Why should you visit Lisbon?</a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
+              <MDBBtn color="secondary" rounded size="md">
+                Read more
+              </MDBBtn>
             </MDBCol>
-
-            <MDBCol md="12" lg="4" className="mb-lg-0 mb-5">
-              <MDBView hover rounded className="z-depth-1-half mb-4">
+            <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
+              <MDBView hover className="rounded z-depth-2 mb-4" waves>
                 <img
                   className="img-fluid"
-                  src="https://mdbootstrap.com/img/Photos/Others/images/52.jpg"
-                  alt=""
+                  src={Tech}
+                  alt="technology"
+                  style={{ border: "1px solid lightgrey" }}
                 />
-                <a href="#!">
-                  <MDBMask overlay="white-slight" className="waves-light" />
-                </a>
+                <MDBMask overlay="white-slight" />
               </MDBView>
-              <MDBRow className="mb-3">
-                <MDBCol size="12">
-                  <a href="#!">
-                    <MDBBadge color="success">
-                      <MDBIcon
-                        icon="leaf"
-                        className="pr-2"
-                        aria-hidden="true"
-                      />
-                      Nature
-                    </MDBBadge>
-                  </a>
-                </MDBCol>
-              </MDBRow>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!" className="font-weight-bold">
-                    This is title of the news
-                  </a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">
-                    How to recognize the footsteps of wild animals?
-                  </a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">National Parks in Poland.</a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between" style={newsStyle}>
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">Traveling without littering the planet.</a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
-              <div className="d-flex justify-content-between mb-4">
-                <MDBCol size="11" className="text-truncate pl-0 mb-3">
-                  <a href="#!">How to protect rainforests?</a>
-                </MDBCol>
-                <a href="#!">
-                  <MDBIcon icon="angle-double-right" />
-                </a>
-              </div>
+              <a href="#!" className="deep-orange-text">
+                <h6 className="font-weight-bold mb-3">
+                  <MDBIcon icon="graduation-cap" className="pr-2" />
+                  Technology
+                </h6>
+              </a>
+              <h4 className="font-weight-bold mb-3">
+                <strong>Learn to Code in 365 days</strong>
+              </h4>
+
+              <p className="dark-grey-text">
+                Find articles about Technology, Innovaiton, Coding and a lot
+                more.
+              </p>
+              <MDBBtn color="secondary" rounded size="md">
+                Read more
+              </MDBBtn>
+            </MDBCol>
+            <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
+              <MDBView hover className="rounded z-depth-2 mb-4" waves>
+                <img className="img-fluid" src={God} alt="find God" />
+                <MDBMask overlay="white-slight" />
+              </MDBView>
+              <a href="#!" className="blue-text">
+                <h6 className="font-weight-bold mb-3">
+                  <MDBIcon icon="fire" className="pr-2" />
+                  Find God
+                </h6>
+              </a>
+              <h4 className="font-weight-bold mb-3">
+                <strong>Let's talk about God</strong>
+              </h4>
+
+              <p className="dark-grey-text">
+                I am Christian, but keep an open mind when reading. Don't get
+                scared. Just heated conversations. That is all there is to it.
+              </p>
+              <MDBBtn color="secondary" rounded size="md">
+                Read more
+              </MDBBtn>
             </MDBCol>
           </MDBRow>
         </MDBCardBody>
@@ -249,4 +114,28 @@ const FeaturesPage = () => {
   )
 }
 
-export default FeaturesPage
+export default Insight
+
+export const pageQuery = graphql`
+  query InsightQuery {
+    allContentfulInsight(limit: 1000) {
+      edges {
+        node {
+          title
+          slug
+          tags
+          image {
+            fluid {
+              src
+            }
+          }
+          body {
+            childContentfulRichText {
+              html
+            }
+          }
+        }
+      }
+    }
+  }
+`

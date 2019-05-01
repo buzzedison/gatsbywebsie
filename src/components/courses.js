@@ -27,7 +27,7 @@ const Courses = () => {
               MongoDB, Node Js, Gatsby. Take your first course for free. Course
               begins May 20, 2019.
             </MDBCardText>
-            <MDBBtn href="#" color="primary">
+            <MDBBtn href="/coding" color="primary">
               GO TO COURSES
             </MDBBtn>
           </MDBCardBody>
