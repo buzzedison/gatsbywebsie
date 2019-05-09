@@ -53,7 +53,7 @@ const Insight = ({ data }) => {
                 </strong>
               </p>
 
-              <MDBBtn color="grey" rounded size="md"style={{color:'white'}}>
+              <MDBBtn color="grey" rounded size="md" style={{ color: "white" }}>
                 Read more
               </MDBBtn>
             </MDBCol>
@@ -78,7 +78,7 @@ const Insight = ({ data }) => {
               </h4>
 
               <p className="dark-grey-text">Coming soon</p>
-              <MDBBtn color="grey" rounded size="md"style={{color:'white'}}>
+              <MDBBtn color="grey" rounded size="md" style={{ color: "white" }}>
                 Read more
               </MDBBtn>
             </MDBCol>
@@ -101,7 +101,7 @@ const Insight = ({ data }) => {
                 I am Christian, but keep an open mind when reading. Don't get
                 scared. Just heated conversations. That is all there is to it.
               </p>
-              <MDBBtn color="grey" rounded size="md"style={{color:'white'}}>
+              <MDBBtn color="grey" rounded size="md" style={{ color: "white" }}>
                 Read more
               </MDBBtn>
             </MDBCol>
