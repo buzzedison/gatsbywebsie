@@ -7,6 +7,7 @@ import {
   MDBBtn,
   MDBView,
   MDBMask,
+  MDBContainer,
 } from "mdbreact"
 import Layout from "../components/layout"
 import HTMLCSS from "../images/htmlcss.png"
@@ -19,16 +20,21 @@ import Django from "../images/django.png"
 const Coding = () => {
   return (
     <Layout>
-      <section className="container">
+      <MDBContainer>
         <h2 className="h1-responsive font-weight-bold my-5">
           Learn to code with edison.
         </h2>
-        <p className="grey-text w-responsive mx-auto mb-5">
-          I have been teaching people how to code for more than a decade. Took
-          some long break in between and started several businesses. I am back
-          now. I want to teach 50, 000 people how to code. You can start for
-          free, and if you like what you are getting, you can subscribe to my
-          paid course.
+        <p
+          className="dark-text  mb-5"
+          style={{ textAlign: "left", paddingRight: "20px" }}
+        >
+          <strong>
+            I have been teaching people how to code for more than a decade. Took
+            some long break in between and started several businesses. I am back
+            now. I want to teach 50, 000 people how to code. You can start for
+            free, and if you like what you are getting, you can subscribe to my
+            paid course.
+          </strong>
         </p>
         <p>
           {" "}
@@ -41,7 +47,7 @@ const Coding = () => {
 
         <MDBRow className="text-center">
           <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
-            <MDBView className="overlay rounded z-depth-1" waves>
+            <MDBView className="overlay rounded z-depth-0" waves>
               <img src={HTMLCSS} alt="" className="img-fluid" />
               <a href="#!">
                 <MDBMask overlay="white-slight" />
@@ -60,7 +66,7 @@ const Coding = () => {
             </MDBCardBody>
           </MDBCol>
           <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
-            <MDBView className="overlay rounded z-depth-1" waves>
+            <MDBView className="overlay rounded z-depth-0" waves>
               <img src={JAVASCRIPT} alt="" className="img-fluid" />
               <a href="#!">
                 <MDBMask overlay="white-slight" />
@@ -81,7 +87,7 @@ const Coding = () => {
             </MDBCardBody>
           </MDBCol>
           <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
-            <MDBView className="overlay rounded z-depth-1" waves>
+            <MDBView className="overlay rounded z-depth-0" waves>
               <img src={PYTHON} alt="" className="img-fluid" />
               <a href="#!">
                 <MDBMask overlay="white-slight" />
@@ -102,7 +108,7 @@ const Coding = () => {
         <p>
           <MDBRow className="text-center">
             <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
-              <MDBView className="overlay rounded z-depth-1" waves>
+              <MDBView className="overlay rounded z-depth-0" waves>
                 <img src={Rt} alt="" className="img-fluid" />
                 <a href="#!">
                   <MDBMask overlay="white-slight" />
@@ -120,7 +126,7 @@ const Coding = () => {
               </MDBCardBody>
             </MDBCol>
             <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
-              <MDBView className="overlay rounded z-depth-1" waves>
+              <MDBView className="overlay rounded z-depth-0" waves>
                 <img src={Drupal} alt="" className="img-fluid" />
                 <a href="#!">
                   <MDBMask overlay="white-slight" />
@@ -139,7 +145,7 @@ const Coding = () => {
               </MDBCardBody>
             </MDBCol>
             <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
-              <MDBView className="overlay rounded z-depth-1" waves>
+              <MDBView className="overlay rounded z-depth-0" waves>
                 <img
                   src={Django}
                   alt=""
@@ -163,7 +169,7 @@ const Coding = () => {
             </MDBCol>
           </MDBRow>
         </p>
-      </section>
+      </MDBContainer>
     </Layout>
   )
 }

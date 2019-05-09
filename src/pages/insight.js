@@ -2,13 +2,14 @@ import React from "react"
 import {
   MDBRow,
   MDBCol,
-  MDBCard,
+  MDBContainer,
   MDBCardBody,
   MDBMask,
   MDBIcon,
   MDBView,
   MDBBtn,
 } from "mdbreact"
+
 import { Link, graphql } from "gatsby"
 import Inspire from "../images/inspire.png"
 import Layout from "../components/layout"
@@ -19,7 +20,7 @@ const Insight = ({ data }) => {
   const InsightBlog = data.allContentfulInsight.edges
   return (
     <Layout>
-      <MDBCard className="my-5 px-5 pb-5">
+      <MDBContainer style={{ maxWidth: "950px", border: "0" }}>
         <MDBCardBody className="text-center">
           <h2 className="h1-responsive font-weight-bold text-center my-5">
             Insight, Blog, My thoughts, Rantings, Cravings!
@@ -32,7 +33,7 @@ const Insight = ({ data }) => {
           </p>
           <MDBRow>
             <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
-              <MDBView hover className="rounded z-depth-2 mb-4" waves>
+              <MDBView hover className="rounded z-depth-0 mb-4" waves>
                 <img className="img-fluid" src={Inspire} alt="inspire" />
                 <MDBMask overlay="white-slight" />
               </MDBView>
@@ -52,12 +53,12 @@ const Insight = ({ data }) => {
                 </strong>
               </p>
 
-              <MDBBtn color="secondary" rounded size="md">
+              <MDBBtn color="grey" rounded size="md">
                 Read more
               </MDBBtn>
             </MDBCol>
             <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
-              <MDBView hover className="rounded z-depth-2 mb-4" waves>
+              <MDBView hover className="rounded z-depth-0 mb-0" waves>
                 <img
                   className="img-fluid"
                   src={Tech}
@@ -76,16 +77,13 @@ const Insight = ({ data }) => {
                 <strong>Learn to Code in 365 days</strong>
               </h4>
 
-              <p className="dark-grey-text">
-                Find articles about Technology, Innovaiton, Coding and a lot
-                more.
-              </p>
-              <MDBBtn color="secondary" rounded size="md">
+              <p className="dark-grey-text">Coming soon</p>
+              <MDBBtn color="grey" rounded size="md">
                 Read more
               </MDBBtn>
             </MDBCol>
             <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
-              <MDBView hover className="rounded z-depth-2 mb-4" waves>
+              <MDBView hover className="rounded z-depth-0 mb-4" waves>
                 <img className="img-fluid" src={God} alt="find God" />
                 <MDBMask overlay="white-slight" />
               </MDBView>
@@ -103,13 +101,13 @@ const Insight = ({ data }) => {
                 I am Christian, but keep an open mind when reading. Don't get
                 scared. Just heated conversations. That is all there is to it.
               </p>
-              <MDBBtn color="secondary" rounded size="md">
+              <MDBBtn color="grey" rounded size="md">
                 Read more
               </MDBBtn>
             </MDBCol>
           </MDBRow>
         </MDBCardBody>
-      </MDBCard>
+      </MDBContainer>
     </Layout>
   )
 }

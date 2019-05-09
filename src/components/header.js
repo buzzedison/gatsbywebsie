@@ -32,8 +32,8 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div className="container">
-        <Navbar light expand="md">
+      <div>
+        <Navbar light expand="md" style={{ backgroundColor: "white" }}>
           <NavbarBrand href="/">
             <img src={logo} alt="logo" />
           </NavbarBrand>

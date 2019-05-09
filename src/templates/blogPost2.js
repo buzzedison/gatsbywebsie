@@ -3,8 +3,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogPost = ({ data }) => {
-  const { title, body, image, tags } = data.contentfulInsight
+const BlogPost2 = ({ it }) => {
+  const { title, body, image } = it.contentfulTechnology
   return (
     <Layout>
       <SEO title={title} />
@@ -38,11 +38,11 @@ const BlogPost = ({ data }) => {
   )
 }
 
-export default BlogPost
+export default BlogPost2
 
-export const pageQuery = graphql`
+export const TechQuery = graphql`
   query($slug: String!) {
-    contentfulInsight(slug: { eq: $slug }) {
+    contentfulTechnology(slug: { eq: $slug }) {
       title
       slug
 
@@ -51,7 +51,6 @@ export const pageQuery = graphql`
           url
         }
       }
-      tags
 
       body {
         childContentfulRichText {
