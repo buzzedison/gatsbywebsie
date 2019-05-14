@@ -30,12 +30,6 @@ const BlogPost = ({ data }) => {
           }}
         />
 
-        <img
-          alt={title}
-          src={moreImage.fluid}
-          className="container"
-          id="blogImg"
-        />
         <div
           className="container"
           id="content"
