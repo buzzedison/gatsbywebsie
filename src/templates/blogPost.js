@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogPost = ({ data }) => {
-  const { title, body, image, tags } = data.contentfulInsight
+  const { title, body, image, moreImage, summarize } = data.contentfulInsight
   return (
     <Layout>
       <SEO title={title} />
@@ -30,7 +30,21 @@ const BlogPost = ({ data }) => {
           }}
         />
 
-        <Link to="/blog" className="container" id="content">
+        <img
+          alt={title}
+          src={moreImage.fluid}
+          className="container"
+          id="blogImg"
+        />
+        <div
+          className="container"
+          id="content"
+          dangerouslySetInnerHTML={{
+            __html: summarize.childContentfulRichText.html,
+          }}
+        />
+
+        <Link to="/insight" className="container" id="content">
           Back to Insight/Blog
         </Link>
       </div>
@@ -61,6 +75,7 @@ export const pageQuery = graphql`
       moreImage {
         fluid {
           src
+          aspectRatio
         }
       }
 
