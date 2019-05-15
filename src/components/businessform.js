@@ -82,7 +82,7 @@ class BusinessForm extends React.Component {
                             className="grey-text"
                           >
                             Why do you want to attend the Executive business
-                            training?
+                            training and coaching?
                           </label>
                           <textarea
                             type="text"
