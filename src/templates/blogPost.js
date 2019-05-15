@@ -66,12 +66,6 @@ export const pageQuery = graphql`
           html
         }
       }
-      moreImage {
-        fluid {
-          src
-          aspectRatio
-        }
-      }
 
       summarize {
         childContentfulRichText {
