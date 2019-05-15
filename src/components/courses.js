@@ -41,7 +41,7 @@ const Courses = () => {
               investors, learn to inspire and lead your team, learn to manage
               your business effectively.
             </MDBCardText>
-            <MDBBtn href="#" color="primary">
+            <MDBBtn href="/business" color="primary">
               EXPLORE
             </MDBBtn>
           </MDBCardBody>
