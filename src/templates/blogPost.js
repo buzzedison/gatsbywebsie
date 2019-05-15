@@ -30,14 +30,6 @@ const BlogPost = ({ data }) => {
           }}
         />
 
-        <div
-          className="container"
-          id="content"
-          dangerouslySetInnerHTML={{
-            __html: summarize.childContentfulRichText.html,
-          }}
-        />
-
         <Link to="/insight" className="container" id="content">
           Back to Insight/Blog
         </Link>
@@ -62,12 +54,6 @@ export const pageQuery = graphql`
       tags
 
       body {
-        childContentfulRichText {
-          html
-        }
-      }
-
-      summarize {
         childContentfulRichText {
           html
         }
