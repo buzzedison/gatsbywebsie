@@ -7,7 +7,10 @@ const BusinessProgram = () => {
       <h2 className="h1-responsive font-weight-bold my-5">
         Proven Practices, Sound advice.
       </h2>
-      <p className="lead grey-text w-responsive mx-auto mb-5">
+      <p
+        className="light black-text w-responsive mx-auto mb-3"
+        style={{ paddingRight: "10px" }}
+      >
         This program provides a practical overview of the fundamentals required
         to start and manage a business. Starts July, 2019 at The Career Hub,
         Adenta (4 weeks). GHC 150 only.{" "}
@@ -49,7 +52,10 @@ const BusinessProgram = () => {
         <MDBCol md="4">
           <MDBIcon far icon="cocktail" size="3x" className="yellow-text" />
           <h5 className="font-weight-bold my-4 yellow-text">Key Benefits</h5>
-          <p className="grey-text mb-md-0 mb-5"style={{paddingRight:'10px'}}>
+          <p
+            className="grey-text mb-md-0 mb-5"
+            style={{ paddingRight: "10px" }}
+          >
             You learn better by actually doing. You get to start your business
             in this period or learn to better manage your existing business. We
             will do some talking, but we will get down to doing most of the

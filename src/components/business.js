@@ -5,7 +5,7 @@ class Business extends React.Component {
   render() {
     return (
       <div>
-        <MDBContainer fluid>
+        <MDBContainer>
           <MDBView>
             <img src={PEOPLE} className="img-fluid" alt="" />
             <MDBMask pattern={6} className="flex-center">
