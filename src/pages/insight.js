@@ -132,17 +132,7 @@ export const pageQuery = graphql`
               html
             }
           }
-          moreImage {
-            fluid{
-              src
-            }
-          }
-              
-                summarize{
-                  childContentfulRichText{
-                    html
-                  }
-                }
+         
         }
       }
     }
