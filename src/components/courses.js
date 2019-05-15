@@ -54,7 +54,7 @@ const Courses = () => {
               Open conversation about God. You won't be judged. Want to go into
               ministry? Think you have been called by God? Let us talk.
             </MDBCardText>
-            <MDBBtn href="#" color="primary">
+            <MDBBtn href="/kingdom" color="primary">
               EXPLORE
             </MDBBtn>
           </MDBCardBody>

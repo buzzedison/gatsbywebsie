@@ -16,7 +16,7 @@ import {
   DropdownItem,
 } from "reactstrap"
 
-class Header extends React.Component {
+class Header extends Component {
   constructor(props) {
     super(props)
 
@@ -69,7 +69,7 @@ class Header extends React.Component {
               </NavItem>
 
               <NavItem>
-                <NavLink href="/ministry">Ministry</NavLink>
+                <NavLink href="/kingdom">Ministry</NavLink>
               </NavItem>
 
               <NavItem>
