@@ -58,7 +58,9 @@ class Header extends Component {
                     <NavLink href="/coding">Coding </NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>Business</DropdownItem>
+                  <DropdownItem>
+                    <NavLink href="/business">Business</NavLink>
+                  </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>Ministry</DropdownItem>
                 </DropdownMenu>
