@@ -9,12 +9,7 @@ import Intro from "../components/intro"
 import SEO from "../components/seo"
 import Courses from "../components/courses"
 // Other imports
-import netlifyIdentity from "netlify-identity-widget"
-var buttons = document.createElement("div")
-// Make netlifyIdentity accessible in the browser console
-window.netlifyIdentity = netlifyIdentity
 
-netlifyIdentity.init()
 
 const IndexPage = () => (
   <div>
