@@ -34,7 +34,7 @@ const BlogPost = ({ data }) => {
           Back to Insight/Blog
         </Link>
       </div>
-    </Layout>
+    </Layout>  
   )
 }
 
