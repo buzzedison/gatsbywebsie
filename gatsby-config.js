@@ -9,10 +9,7 @@ module.exports = {
     author: `@buzzedison`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/app/*`] },
-    },
+   
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `@contentful/gatsby-transformer-contentful-richtext`,
