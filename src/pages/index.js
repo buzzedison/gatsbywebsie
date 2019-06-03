@@ -8,8 +8,6 @@ import MainHeader from "../components/main"
 import Intro from "../components/intro"
 import SEO from "../components/seo"
 import Courses from "../components/courses"
-// Other imports
-
 
 const IndexPage = () => (
   <div>

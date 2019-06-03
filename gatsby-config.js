@@ -1,7 +1,5 @@
 const dotenv = require("dotenv")
-if (process.env.NODE_ENV !== "production") {
-  dotenv.config()
-}
+
 module.exports = {
   siteMetadata: {
     title: `Buzzedison: Spark your Career or Calling`,
@@ -9,7 +7,6 @@ module.exports = {
     author: `@buzzedison`,
   },
   plugins: [
-   
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `@contentful/gatsby-transformer-contentful-richtext`,
