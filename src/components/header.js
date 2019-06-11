@@ -88,6 +88,10 @@ class Header extends Component {
               <NavItem>
                 <NavLink href="/contact">Contact</NavLink>
               </NavItem>
+
+              <NavItem>
+                <NavLink href="/account">Login/Signup</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>

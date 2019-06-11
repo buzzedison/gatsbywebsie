@@ -16,6 +16,7 @@ const IndexPage = () => (
         title="Home"
         keywords={[`IT courses`, `Business development`, `react`]}
       />
+
       <Intro />
       <MainHeader />
       <Courses />
